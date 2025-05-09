@@ -32,9 +32,9 @@ const CalendarioAgenda = () => {
     <div className="agenda-page">
       {/* Video de fondo */}
       <video controls width="100%">
-        <source src="/videos/VID-20250428-WA0013.mp4" type="video/mp4" />
-        Tu navegador no soporta la etiqueta de video.
-      </video>
+  <source src="/videos/VID-20250428-WA0013.mp4" type="video/mp4" />
+  Tu navegador no soporta la etiqueta de video.
+</video>
 
       {/* Contenido principal de la página */}
       <div className="calendario-container">
