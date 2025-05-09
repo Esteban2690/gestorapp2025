@@ -140,7 +140,7 @@ const Booking = () => {
       <div className="booking-content animate-fadeInUp">
         <div className="video-section">
           <video className="video-parcial" autoPlay>
-            <source src={fondoVideo} type="/src/assets/img/images.jpg" />
+            <source src={fondoVideo} type="/src/assets/Videos/VID-20250428-WA0014.mp4" />
             Tu navegador no soporta el video.
           </video>
         </div>
