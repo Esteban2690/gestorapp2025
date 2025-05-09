@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './calendarioAgenda.css';
-import videoBackground from '../../../assets/Videos/VID-20250428-WA0013.mp4';
+import videoSrc from '../../../assets/Videos/VID-20250428-WA0013.mp4';
 
 const CalendarioAgenda = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -32,9 +32,9 @@ const CalendarioAgenda = () => {
   return (
     <div className="agenda-page">
       {/* Video de fondo */}
-      <video className="video-background" autoPlay loop muted>
-        <source src={videoBackground} type="video/mp4" />
-        Tu navegador no soporta el video de fondo.
+      <video controls width="100%">
+        <source src={videoSrc} type="video/mp4" />
+        Tu navegador no soporta la etiqueta de video.
       </video>
 
       {/* Contenido principal de la página */}
@@ -42,19 +42,19 @@ const CalendarioAgenda = () => {
         <h2>Calendario de Reservas</h2>
 
         {/* Selección de fecha */}
-        <input 
-          type="date" 
-          value={selectedDate} 
-          onChange={handleDateSelect} 
+        <input
+          type="date"
+          value={selectedDate}
+          onChange={handleDateSelect}
         />
 
         {/* Cuadro de horarios disponibles */}
         <div className="horarios">
           {/* Horarios de 8 AM a 6 PM */}
           {Array.from({ length: 11 }, (_, i) => 8 + i).map(hour => (
-            <div 
-              key={hour} 
-              className={`hora ${selectedHours.includes(hour) ? 'seleccionada' : ''}`} 
+            <div
+              key={hour}
+              className={`hora ${selectedHours.includes(hour) ? 'seleccionada' : ''}`}
               onClick={() => handleHourSelect(hour)}
             >
               {hour}:00
@@ -65,24 +65,24 @@ const CalendarioAgenda = () => {
         {/* Formulario de reserva */}
         <h3>Formulario de Reserva</h3>
         <section className="formulario-reserva">
-          <input 
-            type="text" 
-            placeholder="Nombre completo" 
-            value={name} 
-            onChange={(e) => setName(e.target.value)} 
+          <input
+            type="text"
+            placeholder="Nombre completo"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
           <div className="formulario-doble">
-            <input 
-              type="text" 
-              placeholder="Teléfono" 
-              value={phone} 
-              onChange={(e) => setPhone(e.target.value)} 
+            <input
+              type="text"
+              placeholder="Teléfono"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             />
-            <input 
-              type="email" 
-              placeholder="Email" 
-              value={email} 
-              onChange={(e) => setEmail(e.target.value)} 
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <button onClick={handleSubmit}>Reservar</button>
