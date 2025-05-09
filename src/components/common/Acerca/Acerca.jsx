@@ -1,10 +1,12 @@
+import partsImage from "../../../../src/assets/img/parts.webp";
+
 export function Acerca() {
     return (
         <section className="container my-5">
             <section className="row align-items-center">
                 {/* Imagen representativa */}
                 <section className="col-12 col-md-6">
-                    <img src="../../../../src/assets/img/parts.webp" alt="Auto de alto rendimiento" className="img-fluid rounded shadow" />
+                    <img src={partsImage} alt="Auto de alto rendimiento" className="img-fluid rounded shadow" />
                 </section>
 
                 {/* Texto descriptivo */}
