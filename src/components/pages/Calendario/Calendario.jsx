@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './calendarioAgenda.css';
-import videoSrc from '../../../assets/Videos/VID-20250428-WA0013.mp4';
 
 const CalendarioAgenda = () => {
   const [selectedDate, setSelectedDate] = useState(null);

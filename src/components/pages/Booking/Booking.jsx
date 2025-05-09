@@ -1,5 +1,5 @@
 import { useState } from "react";
-import fondoVideo from "/src/assets/Videos/VID-20250428-WA0014.mp4";
+import fondoVideo from "../../assets/Videos/VID-20250428-WA0014.mp4";
 import "./Booking.css";
 
 const Booking = () => {
@@ -139,8 +139,8 @@ const Booking = () => {
 
       <div className="booking-content animate-fadeInUp">
         <div className="video-section">
-          <video className="video-parcial" autoPlay>
-            <source src={fondoVideo} type="/src/assets/Videos/VID-20250428-WA0014.mp4" />
+          <video className="video-parcial" autoPlay muted loop>
+            <source src={fondoVideo} type="video/mp4" />
             Tu navegador no soporta el video.
           </video>
         </div>
